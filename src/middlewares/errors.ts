@@ -7,6 +7,8 @@ export const errorMiddleware: ErrorRequestHandler = (
   res,
   next
 ) => {
+  console.error("🔥 REAL ERROR:", error);
+  
   res.status(error.statusCode || 500).json({
     message: error.message,
     errorCode: error.errorCode,

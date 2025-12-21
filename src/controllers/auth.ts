@@ -2,7 +2,6 @@ import type { NextFunction, Request, Response } from "express"
 import { prismaClient } from "../index.js";
 import {compareSync, hashSync} from 'bcrypt';
 import { BadRequestsException } from '../exceptions/bad_request.js';
-// import {sign} from 'jsonwebtoken';
 import jwt from "jsonwebtoken";
 import { JWT_SECRET } from "../secrets.js";
 import { ErrorCode } from "../exceptions/root.js";
